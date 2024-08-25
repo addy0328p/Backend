@@ -57,15 +57,9 @@ fs.appendFile('./test.txt', 'This is appended asynchronously.', (err) => {
     }
 });
 
-// Non-blocking request - Asynchronous copy operation.
-// Copies content from 'test.txt' to 'test2.txt' asynchronously. The program doesn't wait.
-fs.copyFile('./test.txt', './test2.txt', (err) => {
-    if (err) {
-        console.log("Error copying file:", err);
-    } else {
-        console.log("File copied asynchronously");
-    }
-});
+// Synchronous call to append data to 'test.txt' without overwriting existing content.
+// Adds a timestamp and custom message, preserving the previous content.
+fs.appendFileSync('./test.txt', `this does not overwrite data it append means add data ${Date.now()} Hey there you logged on this date`);
 
 // Non-blocking request - Asynchronous file delete operation.
 // Deletes 'test2.txt'. The program does not wait; once deletion completes, the callback logs the result.
