@@ -26,6 +26,7 @@ const app = fs.readFile('./Contacts.txt', "utf-8", (err, result) => {
 
 // Synchronous call to append data to 'test.txt' without overwriting existing content.
 // Adds a timestamp and custom message, preserving the previous content.
+//The fs.cpSync() method in Node.js is used to synchronously copy files or directories from a source path to a destination path. It was introduced in Node.js v16.7.0 and is part of the newer fs.promises API that provides more streamlined methods for file operations.
 fs.appendFileSync('./test.txt', `this does not overwrite data it append means add data ${Date.now()} Hey there you logged on this date`);
 
 // Synchronous call to copy the content of 'test.txt' to 'test2.txt'.
