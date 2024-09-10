@@ -1,13 +1,15 @@
 {
-  "name": "backend",
+  "name": "express_revision",
   "version": "1.0.0",
-  "main": "hello.js",
+  "main": "lExpress.js",
   "scripts": {
-    "start":"node hello.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "express": "^4.20.0",
+    "node-modules": "^1.0.1"
+  }
 }
-
